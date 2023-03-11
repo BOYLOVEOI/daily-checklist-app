@@ -16,10 +16,12 @@ add_button = sg.Button('Add')
 
 # Window() may look like a function call, but is actually an object/instance of PySimpleGUI
 # First argument for the Window Object is a title for the window
-# Why must the syntax of the layout argument be [[]]? -> layout takes a list of button or textbox objects
-# HOWEVER, the layout is assembled in a row format... [[label, input_box]] means one row of a label and
-# input_box... BUT if you wanted to rows you would do [[layout],[input_box]]... each inner list represents
-# a row in the window 
+# Why must the syntax of the layout=argument be [[]]? -> layout= takes a nested list (list within a list)
+# of button or text objects. The layout=argument is assembled in a row format meaning that one row 
+# within the window is an inner list within the layout=argument syntax. Thus, [[label],[input_box]] creates
+# 2 rows within the window for there are two inner lists. As it is sequentially-ordered, the label row
+# is on top of the input_box row. BUT in [[label, input_box]] there is only one row for there is only one
+# inner list.
 window = sg.Window("Daily Checklist", layout=[[[label],[input_box,add_button]]])
 window.read()
 
