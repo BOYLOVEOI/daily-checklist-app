@@ -1,5 +1,6 @@
 # Global Variables
-FILE_PATH = r'C:\Users\paull\OneDrive\Desktop\Python Projects\to_do_list_application\todos.txt'
+# The file path SHOULD be changed for wherever you desire to store this application!
+FILE_PATH = 'C:/Users/paull/OneDrive/Desktop/Python Projects/to_do_list_application/todos.txt'
 
 # Function Declaration 
 def get_todos(text_file=FILE_PATH):
