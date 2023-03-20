@@ -2,6 +2,13 @@
 import functions 
 import PySimpleGUI as sg 
 import time
+import os
+
+# If there is no 'to-do' file first present, then we will create a brand new one
+# Once again, you want to CHANGE the filepath to your specific filepath
+if not os.path.exists('C:/Users/paull/OneDrive/Desktop/Python Projects/to_do_list_application/todos.txt'):
+    with open('C:/Users/paull/OneDrive/Desktop/Python Projects/to_do_list_application/todos.txt', 'w'):
+        pass
 
 # Adding a theme for the window
 sg.theme(new_theme='Black')
@@ -102,10 +109,6 @@ while True:
                 error_message = 'Please select a task to edit!'
                 
                 # Pop up window to relay error message
-                sg.popup(error_message, font=('Helvetica', 10))
-
-            except ValueError:
-                error_message = 'Please enter a different and unique task as your edited task!'
                 sg.popup(error_message, font=('Helvetica', 10))
         
         # If user presses complete
