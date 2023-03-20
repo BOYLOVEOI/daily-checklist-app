@@ -54,13 +54,10 @@ while True:
     # window.read() returns a tuple of the button label and the input box 
     # (returned as a dict of key, -TASK-, and user-inputted value)
     # timeout=200 -> window is being read every 200 miliseconds                                                                                                                
-    event, values = window.read()#(timeout=200)                                                                                                       )
-    print(event)
-    print(values)
-    x = functions.get_todos()
-    print(x)
+    event, values = window.read(timeout=200)                                                                          
+
     # Updating the timestamp
-    #window['-TIME-'].update(value=time.strftime('%B %d, %Y %I:%M:%S %p'))
+    window['-TIME-'].update(value=time.strftime('%B %d, %Y %I:%M:%S %p'))
     
     match event:
         # If user presses add
