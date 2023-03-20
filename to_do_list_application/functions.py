@@ -15,5 +15,5 @@ def write_todos(todo_list_local, text_file=FILE_PATH):
 
 # If you want to test specific lines of code and NOT have in executed in your main module (where your
 # importing the module from) you need to have the following if conditional block
-if __name__ == '__main__':
-    print('hello')
+#if __name__ == '__main__':
+    #print('hello')
