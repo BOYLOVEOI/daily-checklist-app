@@ -25,7 +25,7 @@ to_do_list = functions.get_todos()
 # Printing out the list of tasks as checkboxes (in case user wants to complete a task)
 for x in to_do_list:
     # creating a st.checkbox variable that will hold each unique checkbox (with their corresponding task)
-    # through assigning it a key y (the task itself)
+    # through assigning it a key x (the task itself)
     checkbox = st.checkbox(x, key = x)
 
     # if checkbox (which returns a bool) is True (or essentially the checkbox is checked)
@@ -36,7 +36,7 @@ for x in to_do_list:
         # Write the newly edited to_do_list to the task database
         functions.write_todos(to_do_list)
 
-        # Delete the value from the session_state that has the key y (the task)
+        # Delete the value from the session_state that has the key x (the task)
         del st.session_state[x]
 
         # Halts the script and requeues the script from the top
